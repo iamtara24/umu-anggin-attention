@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div class="stage">
+<div class="stage" id="guestView">
 
   <div class="leaf l1"><svg viewBox="0 0 100 100"><path d="M50 5 C20 30 20 70 50 95 C80 70 80 30 50 5 Z" fill="none" stroke="#d9b785" stroke-width="1.2"/><path d="M50 5 L50 95" stroke="#d9b785" stroke-width="1"/></svg></div>
   <div class="leaf l2"><svg viewBox="0 0 100 100"><path d="M50 5 C20 30 20 70 50 95 C80 70 80 30 50 5 Z" fill="none" stroke="#6d7a5e" stroke-width="1.2"/><path d="M50 5 L50 95" stroke="#6d7a5e" stroke-width="1"/></svg></div>
@@ -34,24 +34,24 @@
       <p class="to-line">Kepada Yth. <span id="recipientName">Teman & Keluarga Tersayang</span></p>
       <div class="divider"></div>
 
-      <h1 class="names">Umu <em>&</em> Anggin</h1>
+      <h1 class="names">[Nama Pria] <em>&</em> [Nama Wanita]</h1>
 
       <div class="msg">
         <p>Dengan penuh syukur, kami akan melangsungkan pernikahan dalam suasana yang intim dan sederhana, hanya bersama keluarga terdekat.</p>
-        <p>Bukan karena kalian kurang berarti — justru sebaliknya, kalian begitu berharga di hati kami. Karena beberapa pertimbangan, kami memilih merayakan hari pernikahan ini dalam lingkaran kecil.</p>
+        <p>Bukan karena kalian kurang berarti — justru sebaliknya, kalian begitu berharga di hati kami. Karena beberapa pertimbangan, kami memilih merayakan hari ini dalam lingkaran kecil.</p>
         <p>Mohon maaf apabila kami tidak dapat mengundang secara langsung. Doa restu dari kalian sudah lebih dari cukup untuk kami.</p>
       </div>
 
       <div class="detail-box">
-        <div class="detail-row"><span class="ico">✦</span><span>Sabtu, 10 Oktober 2026</span></div>
-        <div class="detail-row"><span class="ico">✦</span><span>Banjarnegara, Jawa Tengah, Indonesia</span></div>
+        <div class="detail-row"><span class="ico">✦</span><span>[Hari, Tanggal Bulan Tahun]</span></div>
+        <div class="detail-row"><span class="ico">✦</span><span>[Kota, Indonesia]</span></div>
       </div>
 
-      <p class="closing">Dengan cinta,<strong>Umu & Anggin</strong></p>
+      <p class="closing">Dengan cinta,<strong>[Nama Pria] & [Nama Wanita]</strong></p>
 
       <div class="wa-row">
-        <a class="cta cta-secondary" href="https://wa.me/6285786750167?text=Selamat%20ya%20atas%20pernikahannya!%20Semoga%20berbahagia%20selalu%20%F0%9F%A4%8D" target="_blank">Ucapan untuk Umu</a>
-        <a class="cta cta-secondary" href="https://wa.me/628978184233?text=Selamat%20ya%20atas%20pernikahannya!%20Semoga%20berbahagia%20selalu%20%F0%9F%A4%8D" target="_blank">Ucapan untuk Anggin</a>
+        <a class="cta cta-secondary" href="https://wa.me/62xxxxxxxxxx1?text=Selamat%20ya%20atas%20pernikahannya!%20Semoga%20berbahagia%20selalu%20%F0%9F%A4%8D" target="_blank">Ucapan untuk [Nama Pria]</a>
+        <a class="cta cta-secondary" href="https://wa.me/62xxxxxxxxxx2?text=Selamat%20ya%20atas%20pernikahannya!%20Semoga%20berbahagia%20selalu%20%F0%9F%A4%8D" target="_blank">Ucapan untuk [Nama Wanita]</a>
       </div>
     </div>
 
@@ -61,6 +61,41 @@
 
 </div>
 
+<!-- ====== PANEL ADMIN (hanya kamu yang lihat) ====== -->
+<div class="admin-card" id="adminPanel" style="display:none;">
+  <p class="eyebrow" style="text-align:center;">Alat Bantu · Hanya Kamu</p>
+  <h1 class="admin-title">Generator Pesan & Link</h1>
+  <p class="admin-subtitle">Isi sekali, dapat pesan + link personal per orang, siap dikirim ke WA masing-masing.</p>
+  <div class="divider" style="margin:0 auto 24px;"></div>
+
+  <p class="section-label first">1. Link Halaman Ini</p>
+  <div class="field">
+    <input type="text" id="baseUrl" placeholder="https://undangan-kamu.com/index.html">
+    <p class="hint">Isi dengan link undangan ini setelah kamu upload ke hosting (tanpa ?admin=1 di belakangnya).</p>
+  </div>
+
+  <p class="section-label">2. Template Pesan</p>
+  <div class="field">
+    <textarea id="template">Halo {nama} 🤍
+Ada kabar bahagia dari kami, izin berbagi ya. Mohon dibuka link berikut:
+{link}
+
+Ditunggu doanya, terima kasih banyak 🙏</textarea>
+    <p class="hint">Pakai <span class="tag-btn">{nama}</span> dan <span class="tag-btn">{link}</span> — otomatis diganti sesuai penerima.</p>
+  </div>
+
+  <p class="section-label">3. Daftar Penerima</p>
+  <div class="field">
+    <label>Format: Nama, Nomor WA — satu orang per baris</label>
+    <textarea id="recipients" placeholder="Kak Rina, 6281234567890&#10;Dimas, 6289876543210"></textarea>
+    <p class="hint">Nomor pakai awalan 62 (ganti 0 di depan), tanpa spasi/tanda +.</p>
+  </div>
+
+  <p class="section-label">Hasil — Siap Kirim</p>
+  <div class="batch-out" id="batchOut">
+    <p class="empty-msg">Isi ketiga bagian di atas dulu, hasilnya bakal muncul di sini.</p>
+  </div>
+</div>
 <script src="assets/js/main.js"></script>
 
 </body>
