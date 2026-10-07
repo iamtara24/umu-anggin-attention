@@ -275,10 +275,10 @@
   .names{
     font-family:'Cormorant Garamond', serif;
     font-weight:500;
-    font-size: 34px;
-    line-height:1.15;
+    font-size: 28px;
+    line-height: 1.25;
     color: var(--ink);
-    margin: 0;
+    margin: 8px 0;
   }
   .names em{
     font-style: italic;
@@ -340,20 +340,27 @@
   .cta-secondary{
     flex:1;
     margin-top:0;
-    padding: 12px 14px;
+    padding: 8px 10px;
     font-size:11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .cta{
-    display:inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin-top: 22px;
-    padding: 12px 28px;
+    /* padding: 12px 28px; */
     background: var(--ink);
     color: var(--paper);
     text-decoration:none;
     font-size:12.5px;
     letter-spacing:.12em;
-    text-transform:uppercase;
+    text-transform:capitalize;
     border-radius: 30px;
     transition: background .3s ease, transform .3s ease;
   }

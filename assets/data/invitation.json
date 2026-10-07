@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "pageTitle": "Surat Cinta dari Umu & Anggin"
+  },
+  "couple": {
+    "groom": {
+      "name": "Anggin Megantara, S.Kom",
+      "shortName": "Anggin",
+      "phone": "6285172342403"
+    },
+    "bride": {
+      "name": "Umu Habibah, S.Kom",
+      "shortName": "Umu",
+      "phone": "6285175231098"
+    }
+  },
+  "letter": {
+    "eyebrow": "Sebuah Kabar Dari Kami",
+    "defaultRecipient": "Teman & Keluarga Tersayang",
+    "messages": [
+      "Dengan penuh rasa syukur dan bahagia, kami ingin berbagi kabar bahwa kami akan melangsungkan pernikahan secara sederhana dan hanya bersama keluarga terdekat.",
+      "Bukan karena kebersamaan kita kurang berarti, justru sebaliknya, {nama} selalu memiliki tempat yang istimewa di hati kami. Karena beberapa pertimbangan, kami memilih merayakan momen sakral ini dalam lingkaran yang kecil.",
+      "Dari hati yang terdalam, kami memohon maaf belum dapat mengundang secara langsung. Doa restu dari {nama} sangat berharga untuk hari bahagia kami yang akan berlangsung pada:"
+    ],
+    "event": {
+      "date": "Sabtu, 10 Oktober 2026",
+      "location": "Pekandangan RT 002 RW 003, Kec. Banjarmangu, Kab. Banjarnegara, Jawa Tengah"
+    },
+    "closing": {
+      "greeting": "Dengan cinta 🤍,",
+      "signature": "Umu & Anggin"
+    },
+    "whatsappWish": "Selamat ya atas pernikahannya! Semoga berbahagia selalu 🤍"
+  },
+  "ui": {
+    "hintText": "Sentuh untuk membuka surat"
+  }
+}
